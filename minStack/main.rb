@@ -87,7 +87,7 @@ class Stack
       @min.add_at(0, number)
     else
       res = @min.get(0)
-      @min.add_at(0, number) if number > res
+      @min.add_at(0, number) if number < res
     end
   end
 
@@ -99,29 +99,30 @@ class Stack
     result
   end
 
+  def min
+    raise 'Stack is empty' unless @stack
 
+    result = @min.get(0)
+  end
 end
 
 stack = Stack.new
 
+stack = Stack.new
 stack.push(3)
 stack.push(5)
-stack.push(4)
-stack.push(8)
-stack.push(9)
-# puts stack.pop
-# puts stack.min
+puts stack.min
 # => 3
 
-# stack.pop
-# stack.push(7)
-# puts stack.min
-# # => 3
+stack.pop
+stack.push(7)
+puts stack.min
+# => 3
 
-# stack.push(2)
-# puts stack.min
-# # => 2
+stack.push(2)
+puts stack.min
+# => 2
 
-# stack.pop
-# puts stack.min
-# # => 3
+stack.pop
+puts stack.min
+# => 3
