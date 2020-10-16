@@ -31,3 +31,6 @@ puts balanced_brackets?('([)]')
 
 puts balanced_brackets?('[({}{}{})([])]')
 # => true
+
+# Time Complexitiy O(nk)
+# Space Complexity O(n)
