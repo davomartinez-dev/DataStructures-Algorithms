@@ -65,6 +65,8 @@ class LinkedList
   end
 
   def get(index)
+    return nil unless @head
+
     current = @head
     index.times do
       current = current.next_node
@@ -76,10 +78,17 @@ end
 class Stack
   def initialize
     @stack = LinkedList.new
+    @min = LinkedList.new
   end
 
   def push(number)
     @stack.add_at(0, number)
+    if @min.get(0).nil?
+      @min.add_at(0, number)
+    else
+      res = @min.get(0)
+      @min.add_at(0, number) if number > res
+    end
   end
 
   def pop
@@ -89,13 +98,18 @@ class Stack
     @stack.remove(0)
     result
   end
+
+
 end
 
 stack = Stack.new
 
 stack.push(3)
 stack.push(5)
-puts stack.pop
+stack.push(4)
+stack.push(8)
+stack.push(9)
+# puts stack.pop
 # puts stack.min
 # => 3
 
