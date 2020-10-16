@@ -1,8 +1,8 @@
 require 'byebug'
 
-def hi
-  print 'x'
-  x = 1000
-  byebug
+def sliding_maximum(k, array)
+  # your code here
 end
-hi
+
+sliding_maximum(3, [1, 3, 5, 7, 9, 2])
+# => [5, 7, 9, 9]
