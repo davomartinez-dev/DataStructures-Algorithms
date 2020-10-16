@@ -95,7 +95,9 @@ class Stack
     raise 'Stack is empty' unless @stack
 
     result = @stack.get(0)
+    last_min = @min.get(0)
     @stack.remove(0)
+    @min.remove(0) if result === last_min
     result
   end
 
