@@ -13,6 +13,7 @@ def sliding_maximum(k, array)
     if it >= k - 1
       result.push(window_max)
       window_max = array[it]
+      byebug
     end
 
     it += 1
@@ -21,5 +22,5 @@ def sliding_maximum(k, array)
 end
 
 # print sliding_maximum(3, [1, 3, 5, 7, 9, 2]) # [5, 7, 9, 9]
-# print sliding_maximum(4, [9, 3, 5, 1, 7, 10]) # [9, 7, 10]
+print sliding_maximum(4, [9, 3, 5, 1, 7, 10]) # [9, 7, 10]
 print sliding_maximum(3, [1, 3, 5, 7, 9, 2]) # [5, 7, 9, 9]
