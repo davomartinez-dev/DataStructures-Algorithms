@@ -1,6 +1,6 @@
 # Algorithms and Data Structures.
 
-This are some of my solutions for some of coding challenges related to Data Structurres and Algorithms.
+These are some of my solutions for some of coding challenges related to Data Structurres and Algorithms.
 
 ## Built With
 
